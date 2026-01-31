@@ -1,0 +1,38 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@theme {
+  --font-display: "Roboto", sans-serif;
+
+  --color-red: hsl(40, 100%, 67%);
+  --color-blue-800: hsl(234, 19%, 20%);
+  --color-blue-700: hsl(235, 18%, 26%);
+  --color-grey: hsl(0, 0%, 58%);
+  --color-white: hsl(0, 0%, 100%);
+}
+
+
+@layer utilities {
+  .bullet-img {
+    list-style-type: none; /* remove default bullets */
+
+
+  }
+
+  .bullet-img li {
+    position: relative;
+    padding-left: 1.75rem; /* space for custom marker */
+  }
+
+  .bullet-img li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.25em;
+    width: 20px;
+    height: 20px;
+    background-image: url('assets/images/icon-success.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
